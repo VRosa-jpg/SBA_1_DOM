@@ -1,45 +1,44 @@
 
+
 let counter = 0;
 
 function change() {
-
     // images to change
-      let images = Array.from(document.getElementsByClassName('carousel__photo'));
+    let images = Array.from(document.getElementsByClassName('carousel__photo'));
 
-      let currentPhoto = images[counter];
+    // Current photo
+    let currentPhoto = images[counter];
 
-    //   console.log(counter)
-      // Length does not account for index, it accounts for amount of items in an array
-      if (counter < images.length - 1) {
+    // Check if we need to loop back to the first image
+    if (counter < images.length - 1) {
         counter++;
-      } else {
+    } else {
         counter = 0;
-        currentPhoto.classList.remove('initial')
-      }
+    }
 
-      images[counter].classList.add('initial')
-      currentPhoto.classList.remove('initial')
+    // Hide the previous image and show the current image
+    currentPhoto.classList.remove('initial');
+    images[counter].classList.add('initial');
 
+    // Text for each image
+    let text = document.getElementsByClassName('futureProjects');
+    let currentText = [
+        'Levi Ackerman :\n Levi Ackerman is utterly undefeated, always outsmarting and overpowering enemies with unmatched skill, precision, and relentless determination.',
+        'Eren Yeager :\n Eren Yeager won through sheer willpower, pushing his limits, embracing his power, and relentlessly pursuing freedom no matter the cost.',
+        'Itachi :\n Itachi Uchiha was sacrificial, choosing his village\'s safety over personal desires, enduring loneliness and pain to protect everyone he loved.',
+        'Luffy :\n Luffy loves his crew deeply, treating them like family, always putting their well-being first, and fighting fiercely to protect them.',
+        'Bakugo :\n Bakugo is reckless, charging into battles without hesitation, relying on brute force and explosive power, often ignoring risks and consequences.',
+    ];
 
-
-    //   text for each image
-
-      let text = Array.from(document.getElementsByClassName('futureProjects'));
-
-      let currentObject= text[counter];
-
-        if (counter < text.length - 1) {
-            counter++;
-
+    // Update the text content for the current image
+    for (let count = 0; count < text.length; count++) {
+        if (count === counter) {
+            text[count].textContent = currentText[count]; // Show text for the current image
         } else {
-            counter = 0;
-            currentObject.classList.remove('initialText');
+            text[count].textContent = ""; // Hide text for other images
         }
-
-        text[counter].classList.add('initialText');
-        currentObject.classList.remove('initialText');
-
-    
+    }
 }
+
 
     
