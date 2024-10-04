@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" charset="utf-8"></script> <!-- Added defer -->
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
     <title>SBA Document Object Model</title>
 </head>
 <body>
     <div id="title">
-        <h1>My Favorit Anime Characters</h1>
+        <h1>My Favorite Anime Characters</h1>
     </div>
+    
     <div class="carousel-wrapper">
-        <div class="carousel"id="images">
+        <div class="carousel" id="images" onclick="change()"> <!-- Corrected onclick and class/id syntax -->
             <img class="carousel__photo initial" src="Screenshot 2024-10-03 104833.png">
             <img class="carousel__photo" src="Screenshot 2024-10-03 104931.png">
             <img class="carousel__photo" src="Screenshot 2024-10-03 105204.png">
             <img class="carousel__photo" src="Screenshot 2024-10-03 105346.png">
             <img class="carousel__photo" src="Screenshot 2024-10-03 105557.png">
-
-            <div class="carousel__button--next"></div>
-            <div class="carousel__button--prev"></div>
         </div>
     </div>
 
     <div id="futureProjects">
         <h2>Top 5 Animes</h2>
-
     </div>
-    
-    
 </body>
 </html>
