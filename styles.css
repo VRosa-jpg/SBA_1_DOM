@@ -1,19 +1,22 @@
 html {
-    background-color: rgb(206, 136, 136);
+    background-image: url(https://i.pinimg.com/originals/b3/68/d8/b368d8fa3cb31e0c3c253c7a0580dd65.gif);
+    background-attachment: fixed;
+    
 }
 
 
 body{
     display:flex;
     justify-content: center;
-    background-color: brown;
+    
 }
 
-/* title */
-
-#title {
+#main-container {
     display:flex;
-    flex-flow:wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: brown;
+    max-width: 50%;
 }
 
 /* Carousel */
@@ -44,6 +47,23 @@ body{
     position:relative;
     z-index:900;
 }
+
+/* Top 5 animes */
+
+.container {
+    overflow: hidden;
+    width:90%;
+}
+
+.futureProjects.initialText,
+.futureProjects.active {
+    opacity:1;
+    position:relative;
+    z-index:900;
+
+}
+
+
 
 
 
