@@ -1,6 +1,5 @@
 html {
-    background-image: url(https://i.pinimg.com/originals/b3/68/d8/b368d8fa3cb31e0c3c253c7a0580dd65.gif);
-    background-attachment: fixed;
+    background-color: black;
     
 }
 
@@ -8,15 +7,17 @@ html {
 body{
     display:flex;
     justify-content: center;
-    
+    background-image: url(https://i.pinimg.com/originals/b3/68/d8/b368d8fa3cb31e0c3c253c7a0580dd65.gif);
+    background-attachment: fixed;
 }
 
 #main-container {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: brown;
+    background-color: rgb(107, 158, 235);
     max-width: 50%;
+    border-radius: 5%;
 }
 
 /* Carousel */
@@ -62,6 +63,16 @@ body{
     z-index:900;
 
 }
+
+/* Form */
+
+#favCharForm{
+    width:500px;
+    height:250px;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 
