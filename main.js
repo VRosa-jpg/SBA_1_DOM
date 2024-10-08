@@ -40,5 +40,17 @@ function change() {
     }
 }
 
+let form = document.getElementById('charForm');
+form.addEventListener('Submit', eventListeners);
 
+function eventListeners(event) {
+    event.preventDefault();
+    let firstName = document.getElementById('fname');
+    let lastName = document.getElementById('lname');
+        if(firstName.value == '' || lastName.value == '') {
+            alert("Name cannt not be empty");
+        } else {
+            form.removeEventListener("submit", eventListeners)
+        }
     
+}
